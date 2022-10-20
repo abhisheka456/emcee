@@ -95,8 +95,7 @@ class PTLikePrior(object):
 
         return self.logl(x, *self.loglargs, **self.loglkwargs), lp
 
-
-[docs]class PTSampler(Sampler):
+class PTSampler(Sampler):
     """
     A parallel-tempered ensemble sampler, using :class:`EnsembleSampler`
     for sampling within each parallel chain.
