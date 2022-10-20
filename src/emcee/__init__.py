@@ -24,6 +24,7 @@ from .emcee_version import __version__  # isort:skip
 from . import autocorr, backends, moves
 from .ensemble import EnsembleSampler, walkers_independent
 from .state import State
+from .ptsampler import PTSampler
 
 __all__ = [
     "EnsembleSampler",
@@ -32,5 +33,6 @@ __all__ = [
     "moves",
     "autocorr",
     "backends",
+    "PTSampler",
     "__version__",
 ]
