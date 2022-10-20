@@ -191,7 +191,7 @@ class PTSampler(Sampler):
         if threads > 1 and pool is None:
             self.pool = multi.Pool(threads)
 
-[docs]    def reset(self):
+    def reset(self):
         """
         Clear the ``chain``, ``lnprobability``, ``lnlikelihood``,
         ``acceptance_fraction``, ``tswap_acceptance_fraction`` stored
@@ -210,7 +210,7 @@ class PTSampler(Sampler):
         self._lnlikelihood = None
 
 
-[docs]    def sample(self, p0, lnprob0=None, lnlike0=None, iterations=1,
+    def sample(self, p0, lnprob0=None, lnlike0=None, iterations=1,
                thin=1, storechain=True):
         """
         Advance the chains ``iterations`` steps as a generator.
@@ -408,7 +408,7 @@ class PTSampler(Sampler):
 
         return p, lnprob, logl
 
-[docs]    def thermodynamic_integration_log_evidence(self, logls=None, fburnin=0.1):
+    def thermodynamic_integration_log_evidence(self, logls=None, fburnin=0.1):
         """
         Thermodynamic integration estimate of the evidence.
 
@@ -551,7 +551,7 @@ class PTSampler(Sampler):
         """
         return self.get_autocorr_time()
 
-[docs]    def get_autocorr_time(self, **kwargs):
+    def get_autocorr_time(self, **kwargs):
         """
         Returns a matrix of autocorrelation lengths for each
         parameter in each temperature of shape ``(Ntemps, Ndim)``.
