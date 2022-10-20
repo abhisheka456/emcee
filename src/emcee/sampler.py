@@ -111,12 +111,12 @@ import numpy as np
         raise NotImplementedError("The acor method must be implemented "
                                   "by subclasses")
 
-[docs]    def get_lnprob(self, p):
+    def get_lnprob(self, p):
         """Return the log-probability at the given position."""
         return self.lnprobfn(p, *self.args, **self.kwargs)
 
 
-[docs]    def reset(self):
+    def reset(self):
         """
         Clear ``chain``, ``lnprobability`` and the bookkeeping parameters.
 
@@ -126,7 +126,7 @@ import numpy as np
         self._last_run_mcmc_result = None
 
 
-[docs]    def clear_chain(self):
+    def clear_chain(self):
         """An alias for :func:`reset` kept for backwards compatibility."""
         return self.reset()
 
@@ -135,7 +135,7 @@ import numpy as np
         raise NotImplementedError("The sampling routine must be implemented "
                                   "by subclasses")
 
-[docs]    def run_mcmc(self, pos0, N, rstate0=None, lnprob0=None, **kwargs):
+    def run_mcmc(self, pos0, N, rstate0=None, lnprob0=None, **kwargs):
         """
         Iterate :func:`sample` for ``N`` iterations and return the result.
 
