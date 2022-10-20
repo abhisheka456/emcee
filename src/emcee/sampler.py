@@ -12,8 +12,7 @@ __all__ = ["Sampler"]
 
 import numpy as np
 
-
-[docs]class Sampler(object):
+class Sampler(object):
     """
     An abstract sampler object that implements various helper functions
 
